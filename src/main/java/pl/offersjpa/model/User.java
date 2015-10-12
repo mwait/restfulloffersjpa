@@ -1,5 +1,6 @@
 package pl.offersjpa.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,9 +10,9 @@ import javax.persistence.Table;
 @Entity
 @Table(name="user_marek_tmp")
 public class User {
-
-	 @Id
-	  @GeneratedValue(strategy=GenerationType.AUTO)
+	@Id
+	@Column(name = "id")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	private String address;

@@ -16,6 +16,7 @@ import org.springframework.jndi.JndiTemplate;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor;
+import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.OpenJpaDialect;
 import org.springframework.orm.jpa.vendor.OpenJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -51,7 +52,7 @@ public class App extends SpringBootServletInitializer {
 	    OpenJpaVendorAdapter jpaAdapter() {
 	    	OpenJpaVendorAdapter openJpaVendorAdapter = new OpenJpaVendorAdapter();
 	    openJpaVendorAdapter.setDatabasePlatform("org.apache.openjpa.jdbc.sql.MySQLDictionary");
-	    //openJpaVendorAdapter.setDatabase("MYSQL");
+	    openJpaVendorAdapter.setDatabase(Database.MYSQL);
 	    return openJpaVendorAdapter;
 	    }
 	    

@@ -33,5 +33,19 @@ public class UserDaoImpl implements UserDao {
 		return results;
 
 	}
+	@Override
+	public void createUser(User user) {
+		em.persist(user);
+	}
+	@Override
+	public void deleteUser(Long toDelete) {
+		User user = em.find(User.class, toDelete);
+		em.remove(user);		
+	}
+	@Override
+	public User getUser(Long id) {
+		User user = em.find(User.class, id);
+		return user;
+	}
 
 }

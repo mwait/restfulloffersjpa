@@ -14,6 +14,7 @@
 			<!-- do logów -->
 			<property name="openjpa.Log" value="DefaultLevel=WARN, Runtime=INFO, Tool=INFO, SQL=TRACE"/>
 <property name="openjpa.ConnectionFactoryProperties" value="PrintParameters=true" />
+<property name="openjpa.jdbc.SynchrnozieMappings" value="buildSchema"/>
 		</properties>
 		
 	</persistence-unit>
