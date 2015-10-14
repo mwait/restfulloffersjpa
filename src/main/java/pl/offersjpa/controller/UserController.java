@@ -32,9 +32,10 @@ public class UserController {
 	public User getCustomer(@PathVariable("id") Long id){
 		User user = userService.getUser(id);
 		if (user!=null){
-			throw new UserNotFoundException();}
+			return user;
+			}
 		else{
-		return user;}
+			throw new UserNotFoundException();}
 	}
 	
 	@RequestMapping(value ="/{id}", method = RequestMethod.DELETE)
