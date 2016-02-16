@@ -1,0 +1,14 @@
+language: java
+
+jdk:
+- oraclejdk8
+
+script:
+- mvn install -DskipTests=true
+
+env:
+- JAVA_1_6_HOME=&JAVA_HOME
+
+branches:
+only:
+- master
