@@ -7,7 +7,7 @@ script:
 - mvn install -DskipTests=true
 
 env:
-- JAVA_1_6_HOME=&JAVA_HOME
+- JAVA_1_6_HOME=$JAVA_HOME
 
 branches:
 only:
