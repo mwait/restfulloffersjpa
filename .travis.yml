@@ -4,6 +4,7 @@ jdk:
 - oraclejdk8
 
 script:
+- mvn -Dresume=false release:prepare release:perform -DskipTests
 - mvn install -DskipTests=true
 
 env:
@@ -12,5 +13,6 @@ env:
 branches:
 only:
 - master
+
 
 #test2
